@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>life of bry</title>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.6/dist/htmx.min.js"></script>
+    <meta name="htmx-config" content='{"selfRequestsOnly":false}'>
     <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
@@ -14,20 +16,17 @@
             <div id="pfp-div"><img id="pfp" src="/assets/pfp.jpg"></div>
             <p id="about">
                 <ul>
-                    <li>here for a good time brody....</li>
-                    <li>not a long time</li>
-                    <li>ya know how that shit go</li>
-                    <li>so long space cowboy..</li>
+
                 </ul>
             </p>
         </div>
     </div>
     <div id="nav-content">
         <div id="navbar">
-            <button id="commits">commits</button>
-            <button id="oplog">oplog</button>
-            <button id="blog">blog</button>
-            <button id="recipes">recipes</button>
+            <button hx-get="http://localhost:8000/commits" hx-trigger="load" hx-target="#content" hx-swap="innerHTML" id="commits">commits</button>
+            <button hx-get="http://localhost:8000/oplog" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="oplogs">oplog</button>
+            <button hx-get="http://localhost:8000/blog" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="blog">blogs</button>
+            <button hx-get="http://localhost:8000/recipes" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="recipes">recipes</button>
         </div>
         <hr>
         <div id="content">
