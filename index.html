@@ -21,16 +21,8 @@
             </p>
         </div>
     </div>
-    <div id="nav-content">
-        <div id="navbar">
-            <button hx-get="http://localhost:8000/commits" hx-trigger="load" hx-target="#content" hx-swap="innerHTML" id="commits">commits</button>
-            <button hx-get="http://localhost:8000/oplog" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="oplogs">oplog</button>
-            <button hx-get="http://localhost:8000/blog" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="blog">blogs</button>
-            <button hx-get="http://localhost:8000/recipes" hx-trigger="click" hx-target="#content" hx-swap="innerHTML" id="recipes">recipes</button>
-        </div>
-        <hr>
-        <div id="content">
-        </div>
+    <div class="navbar">
+        <div id="tabs" hx-get="http://localhost:8000/commits" hx-trigger="load" hx-target="#tabs" hx-swap="innerHTML"></div>
     </div>
 
 </body>

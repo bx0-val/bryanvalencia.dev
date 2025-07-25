@@ -49,23 +49,39 @@ li {
     text-align: center;
 }
 
-#navbar {
-    margin-bottom: 10px;
+.navbar {
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
 
-#navbar button{
+
+#tabs button{
     font-size: 20px;
     font-weight: 700;
     border-style: none;
     padding: 5px 45px;
     font-family: 'Courier New', Courier, monospace;
-
+    text-align: center;
 }
 
 #content {
     margin-top: 20px;
     font-size: 10px;
     text-align: left;
+}
+
+.element {
+text-align: center;
+  opacity: 1; 
+  animation: fadeOut 0.5s forwards; /* Apply the animation */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start at full opacity */
+  }
+  100% {
+    opacity: 0; /* End at complete transparency */
+  }
 }
